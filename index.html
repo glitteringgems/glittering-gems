@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLITTERING GEMS - Premium Jewelry Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">GLITTERING GEMS</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html?category=rings">Rings</a></li>
+                            <li><a href="products.html?category=necklaces">Necklaces</a></li>
+                            <li><a href="products.html?category=earrings">Earrings</a></li>
+                            <li><a href="products.html?category=bracelets">Bracelets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>GLITTERING GEMS</h1>
+            <p class="tagline">"Elegance Crystallized, Beauty Immortalized"</p>
+            <p class="hero-description">Discover Exquisite Jewelry Crafted with Passion</p>
+            <a href="products.html" class="btn btn-primary">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2>Our Collections</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">💍</div>
+                    <h3>Rings</h3>
+                    <p>Elegant rings for every occasion</p>
+                    <a href="products.html?category=rings" class="btn btn-secondary">View</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💎</div>
+                    <h3>Necklaces</h3>
+                    <p>Stunning necklaces to elevate your style</p>
+                    <a href="products.html?category=necklaces" class="btn btn-secondary">View</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">✨</div>
+                    <h3>Earrings</h3>
+                    <p>Dazzling earrings for all styles</p>
+                    <a href="products.html?category=earrings" class="btn btn-secondary">View</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⌚</div>
+                    <h3>Bracelets</h3>
+                    <p>Beautiful bracelets to complete your look</p>
+                    <a href="products.html?category=bracelets" class="btn btn-secondary">View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metals Section -->
+    <section class="metals">
+        <div class="container">
+            <h2>Premium Metal Collections</h2>
+            <div class="metals-grid">
+                <div class="metal-card gold">
+                    <h3>Gold</h3>
+                    <p>Timeless luxury in golden brilliance</p>
+                </div>
+                <div class="metal-card diamond">
+                    <h3>Diamond</h3>
+                    <p>Unparalleled sparkle and elegance</p>
+                </div>
+                <div class="metal-card silver">
+                    <h3>Silver</h3>
+                    <p>Classic sophistication in pure silver</p>
+                </div>
+                <div class="metal-card rose-gold">
+                    <h3>Rose Gold</h3>
+                    <p>Contemporary charm in rose tones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <div class="container">
+            <h2>Featured Pieces</h2>
+            <div class="products-grid" id="featuredProducts">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose GLITTERING GEMS?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Authentic Quality</h3>
+                    <p>100% genuine metals and diamonds certified</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Shipping</h3>
+                    <p>Secure and quick delivery to your doorstep</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy with no questions asked</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Payment</h3>
+                    <p>Safe and encrypted transactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get exclusive offers and new collection updates</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GLITTERING GEMS</h4>
+                    <p>Your destination for premium jewelry</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📞 +91 9300120069</p>
+                    <p>📧 info@glitteringgems.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GLITTERING GEMS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
