@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GLITTERING GEMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-page {
+            min-height: 100vh;
+            background-color: var(--light-bg);
+        }
+
+        .about-hero {
+            background: linear-gradient(135deg, var(--secondary-color), #2a2a2a);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--rose-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            padding: 80px 20px;
+        }
+
+        .about-section {
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .mission-card,
+        .vision-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .mission-card h3,
+        .vision-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .mission-card p,
+        .vision-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card p {
+            color: #666;
+        }
+
+        .team-section {
+            margin-top: 4rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-avatar {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color), var(--rose-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .member-info {
+            padding: 1.5rem;
+        }
+
+        .member-info h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .member-info p {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-info .description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .achievement-item {
+            background: linear-gradient(135deg, var(--primary-color), var(--rose-gold));
+            color: var(--secondary-color);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 1rem;
+        }
+
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-text {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">GLITTERING GEMS</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html?category=rings">Rings</a></li>
+                            <li><a href="products.html?category=necklaces">Necklaces</a></li>
+                            <li><a href="products.html?category=earrings">Earrings</a></li>
+                            <li><a href="products.html?category=bracelets">Bracelets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <h1>GLITTERING GEMS</h1>
+        <p>"Elegance Crystallized, Beauty Immortalized"</p>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <!-- Our Story Section -->
+        <div class="about-section">
+            <h2 class="section-title">Our Story</h2>
+            <p class="section-text">
+                GLITTERING GEMS was founded with a singular vision: to create jewelry that transcends time and trends. 
+                What began as a passion for exquisite craftsmanship has blossomed into a premier jewelry destination 
+                serving thousands of satisfied customers across the globe.
+            </p>
+            <p class="section-text">
+                Each piece in our collection is a testament to our commitment to quality, elegance, and timeless beauty. 
+                We believe that jewelry is not just an accessory—it's a reflection of personality, a celebration of moments, 
+                and an investment in memories that last forever.
+            </p>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="about-section">
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>To craft and deliver premium jewelry pieces that embody elegance, authenticity, and sophistication. 
+                    We are dedicated to providing our customers with timeless treasures that celebrate life's precious moments 
+                    with uncompromising quality.</p>
+                </div>
+                <div class="vision-card">
+                    <h3>Our Vision</h3>
+                    <p>To become the world's most trusted jewelry brand, recognized for our commitment to excellence, 
+                    ethical sourcing, and innovative design. We aspire to be the destination where dreams are crystallized 
+                    into wearable art.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="about-section">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h3>Quality</h3>
+                    <p>We use only the finest materials and employ master craftsmen to ensure every piece meets our exacting standards.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h3>Authenticity</h3>
+                    <p>100% genuine metals and certified diamonds. Every piece comes with certification of authenticity.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎨</div>
+                    <h3>Design Excellence</h3>
+                    <p>Our designers create unique, innovative pieces that blend contemporary trends with timeless elegance.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Customer Focus</h3>
+                    <p>Your satisfaction is our priority. We provide exceptional service and support at every step of your journey.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Ethical Sourcing</h3>
+                    <p>We are committed to sustainable practices and ethical sourcing of all our materials.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💚</div>
+                    <h3>Social Responsibility</h3>
+                    <p>We contribute to communities and support causes that promote beauty, elegance, and well-being.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="about-section">
+            <h2 class="section-title">Our Achievements</h2>
+            <div class="achievements">
+                <div class="achievement-item">
+                    <div class="achievement-number">10K+</div>
+                    <div class="achievement-text">Happy Customers</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">5K+</div>
+                    <div class="achievement-text">Unique Designs</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">100%</div>
+                    <div class="achievement-text">Authentic Metals</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">25+</div>
+                    <div class="achievement-text">Awards & Recognition</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Team -->
+        <div class="about-section team-section">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">👑</div>
+                    <div class="member-info">
+                        <h3>Rajesh Kumar</h3>
+                        <p>Founder & CEO</p>
+                        <p class="description">Master jeweler with 25+ years of experience in fine jewelry craftsmanship.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">✨</div>
+                    <div class="member-info">
+                        <h3>Priya Sharma</h3>
+                        <p>Head Designer</p>
+                        <p class="description">Award-winning designer known for innovative and elegant jewelry pieces.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">💎</div>
+                    <div class="member-info">
+                        <h3>Vikram Singh</h3>
+                        <p>Quality Manager</p>
+                        <p class="description">Certified gemologist ensuring every piece meets our quality standards.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">🎯</div>
+                    <div class="member-info">
+                        <h3>Ananya Patel</h3>
+                        <p>Customer Relations</p>
+                        <p class="description">Dedicated to providing exceptional customer service and support.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">🔍</div>
+                    <div class="member-info">
+                        <h3>Arjun Verma</h3>
+                        <p>Master Craftsman</p>
+                        <p class="description">Expert metalsmith with decades of experience in fine jewelry creation.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">🌟</div>
+                    <div class="member-info">
+                        <h3>Divya Singh</h3>
+                        <p>Marketing Director</p>
+                        <p class="description">Passionate about sharing the beauty and elegance of GLITTERING GEMS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="about-section">
+            <h2 class="section-title">Why Choose GLITTERING GEMS?</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🏆</div>
+                    <h3>Premium Quality</h3>
+                    <p>Handpicked gemstones and pure metals of the highest quality standards.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">📜</div>
+                    <h3>Certification</h3>
+                    <p>All diamonds and gemstones come with authenticated certificates of authenticity.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🚚</div>
+                    <h3>Fast & Safe Delivery</h3>
+                    <p>Secure packaging and quick delivery to ensure your precious pieces arrive safely.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy with no questions asked for complete peace of mind.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💳</div>
+                    <h3>Secure Payments</h3>
+                    <p>Encrypted transactions and multiple payment options for your convenience.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎁</div>
+                    <h3>Lifetime Support</h3>
+                    <p>Free cleaning, maintenance, and lifetime support for all your purchases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GLITTERING GEMS</h4>
+                    <p>Your destination for premium jewelry</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📞 +91 9300120069</p>
+                    <p>📧 info@glitteringgems.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GLITTERING GEMS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
