@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - GLITTERING GEMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .products-page {
+            min-height: 100vh;
+            padding: 40px 20px;
+            background-color: var(--light-bg);
+        }
+
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .products-header h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .products-header p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .filter-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .filter-group h3 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.2rem;
+            border: 2px solid var(--primary-color);
+            background: var(--white);
+            color: var(--primary-color);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        #productsGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .filter-section {
+                grid-template-columns: 1fr;
+            }
+
+            #productsGrid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">GLITTERING GEMS</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html?category=rings">Rings</a></li>
+                            <li><a href="products.html?category=necklaces">Necklaces</a></li>
+                            <li><a href="products.html?category=earrings">Earrings</a></li>
+                            <li><a href="products.html?category=bracelets">Bracelets</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Page -->
+    <section class="products-page">
+        <div class="products-container">
+            <div class="products-header">
+                <h1>Our Exquisite Collection</h1>
+                <p>Discover our premium jewelry pieces crafted with precision and elegance</p>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="filter-group">
+                    <h3>Category</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="filterCategory('rings')">Rings</button>
+                        <button class="filter-btn" onclick="filterCategory('necklaces')">Necklaces</button>
+                        <button class="filter-btn" onclick="filterCategory('earrings')">Earrings</button>
+                        <button class="filter-btn" onclick="filterCategory('bracelets')">Bracelets</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Metal Type</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" onclick="filterByMetal('all')">All Metals</button>
+                        <button class="filter-btn" onclick="filterByMetal('Gold')">Gold</button>
+                        <button class="filter-btn" onclick="filterByMetal('Silver')">Silver</button>
+                        <button class="filter-btn" onclick="filterByMetal('Rose Gold')">Rose Gold</button>
+                        <button class="filter-btn" onclick="filterByMetal('Diamond')">Diamond</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GLITTERING GEMS</h4>
+                    <p>Your destination for premium jewelry</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📞 +91 9300120069</p>
+                    <p>📧 info@glitteringgems.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GLITTERING GEMS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        let currentCategory = 'rings';
+        let currentMetal = 'all';
+
+        function filterCategory(category) {
+            currentCategory = category;
+            currentMetal = 'all';
+            document.querySelectorAll('.filter-group:nth-child(1) .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            document.querySelectorAll('.filter-group:nth-child(2) .filter-btn').forEach((btn, idx) => {
+                if (idx === 0) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+
+            loadProducts();
+        }
+
+        function filterByMetal(metal) {
+            currentMetal = metal;
+            const metalButtons = document.querySelectorAll('.filter-group:nth-child(2) .filter-btn');
+            metalButtons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const productsGrid = document.getElementById('productsGrid');
+            const filtered = metal === 'all' 
+                ? products[currentCategory]
+                : products[currentCategory].filter(p => p.metal === metal);
+
+            productsGrid.innerHTML = filtered.map(product => createProductCard(product)).join('');
+        }
+
+        // Set initial category from URL
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCount();
+            initMobileMenu();
+            
+            const params = new URLSearchParams(window.location.search);
+            const urlCategory = params.get('category') || 'rings';
+            currentCategory = urlCategory;
+
+            const categoryButtons = document.querySelectorAll('.filter-group:nth-child(1) .filter-btn');
+            const categoryIndex = ['rings', 'necklaces', 'earrings', 'bracelets'].indexOf(urlCategory);
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            if (categoryIndex >= 0) categoryButtons[categoryIndex].classList.add('active');
+
+            loadProducts();
+        });
+    </script>
+</body>
+</html>
