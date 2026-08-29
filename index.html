@@ -1,203 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLITTERING GEMS - Premium Jewelry Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glittering Gems — Fine Jewelry, Cut to Catch the Light</title>
+<meta name="description" content="Glittering Gems crafts fine jewelry from ethically sourced stones, cut and set by hand in small batches.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <span class="logo-icon">✨</span>
-                    <span class="logo-text">GLITTERING GEMS</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">Shop</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="products.html?category=rings">Rings</a></li>
-                            <li><a href="products.html?category=necklaces">Necklaces</a></li>
-                            <li><a href="products.html?category=earrings">Earrings</a></li>
-                            <li><a href="products.html?category=bracelets">Bracelets</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="nav-icons">
-                    <a href="cart.html" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                    <button class="menu-toggle" id="menuToggle">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+
+<div class="grain"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="wordmark">Glittering&nbsp;Gems</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#collections">Collections</a>
+      <a href="#craft">The Craft</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#contact">Visit</a>
     </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>GLITTERING GEMS</h1>
-            <p class="tagline">"Elegance Crystallized, Beauty Immortalized"</p>
-            <p class="hero-description">Discover Exquisite Jewelry Crafted with Passion</p>
-            <a href="products.html" class="btn btn-primary">Explore Collection</a>
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-facets" aria-hidden="true">
+      <svg id="gemSvg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="faceA" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3a3550"/>
+            <stop offset="100%" stop-color="#1a1726"/>
+          </linearGradient>
+          <linearGradient id="faceB" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#CBA135"/>
+            <stop offset="100%" stop-color="#7a5f1e"/>
+          </linearGradient>
+          <linearGradient id="faceC" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#544b73"/>
+            <stop offset="100%" stop-color="#292339"/>
+          </linearGradient>
+          <linearGradient id="faceD" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#e9d18a"/>
+            <stop offset="100%" stop-color="#CBA135"/>
+          </linearGradient>
+        </defs>
+        <g id="gemGroup">
+          <polygon points="300,40 460,190 300,300 140,190" fill="url(#faceC)" />
+          <polygon points="460,190 560,260 300,560 300,300" fill="url(#faceA)" />
+          <polygon points="140,190 40,260 300,560 300,300" fill="url(#faceB)" />
+          <polygon points="300,40 460,190 560,260 300,150" fill="url(#faceD)" opacity="0.9"/>
+          <polygon points="300,40 140,190 40,260 300,150" fill="url(#faceC)" opacity="0.75"/>
+          <line x1="300" y1="40" x2="300" y2="560" stroke="#0d0b14" stroke-width="1.5" opacity="0.5"/>
+          <line x1="140" y1="190" x2="460" y2="190" stroke="#0d0b14" stroke-width="1.5" opacity="0.5"/>
+        </g>
+        <polygon id="glint" points="300,40 340,150 300,180 265,150" fill="#fff" opacity="0" />
+      </svg>
+    </div>
+
+    <div class="hero-copy">
+      <p class="eyebrow">Est. in a small workshop, cut by hand since day one</p>
+      <h1>Light,<br>cut&nbsp;precisely.</h1>
+      <p class="hero-sub">Glittering Gems is a fictional atelier for this demo — fine jewelry set with traceable stones, faceted to throw light exactly where it belongs.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#collections">View collections</a>
+        <a class="btn btn-ghost" href="#craft">How we cut →</a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span>Scroll</div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Brilliant Cut</span><span>·</span><span>Emerald Cut</span><span>·</span>
+      <span>Pear Cut</span><span>·</span><span>Cushion Cut</span><span>·</span>
+      <span>Marquise Cut</span><span>·</span><span>Asscher Cut</span><span>·</span>
+      <span>Brilliant Cut</span><span>·</span><span>Emerald Cut</span><span>·</span>
+      <span>Pear Cut</span><span>·</span><span>Cushion Cut</span><span>·</span>
+      <span>Marquise Cut</span><span>·</span><span>Asscher Cut</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- COLLECTIONS -->
+  <section class="collections" id="collections">
+    <div class="section-head reveal">
+      <p class="eyebrow">Collections</p>
+      <h2>Three cuts, three temperaments</h2>
+      <p class="section-lede">Every stone is named for the cut that shapes it — the angle of its facets decides how it holds a room.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-visual">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><polygon points="100,20 170,70 140,180 60,180 30,70" fill="none" stroke="currentColor" stroke-width="1.5"/><polygon points="100,20 170,70 100,100 30,70" fill="none" stroke="currentColor" stroke-width="1"/></svg>
         </div>
-    </section>
+        <h3>Brilliant</h3>
+        <p class="card-tag">58 facets, maximum fire</p>
+        <p>Round stones set to scatter light in every direction — the collection built for a hand that moves.</p>
+        <a class="card-link" href="#">Explore Brilliant →</a>
+      </article>
 
-    <!-- Categories Section -->
-    <section class="categories">
-        <div class="container">
-            <h2>Our Collections</h2>
-            <div class="category-grid">
-                <div class="category-card">
-                    <div class="category-icon">💍</div>
-                    <h3>Rings</h3>
-                    <p>Elegant rings for every occasion</p>
-                    <a href="products.html?category=rings" class="btn btn-secondary">View</a>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">💎</div>
-                    <h3>Necklaces</h3>
-                    <p>Stunning necklaces to elevate your style</p>
-                    <a href="products.html?category=necklaces" class="btn btn-secondary">View</a>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">✨</div>
-                    <h3>Earrings</h3>
-                    <p>Dazzling earrings for all styles</p>
-                    <a href="products.html?category=earrings" class="btn btn-secondary">View</a>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">⌚</div>
-                    <h3>Bracelets</h3>
-                    <p>Beautiful bracelets to complete your look</p>
-                    <a href="products.html?category=bracelets" class="btn btn-secondary">View</a>
-                </div>
-            </div>
+      <article class="card reveal">
+        <div class="card-visual">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><rect x="55" y="35" width="90" height="130" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="70" y="50" width="60" height="100" rx="3" fill="none" stroke="currentColor" stroke-width="1"/></svg>
         </div>
-    </section>
+        <h3>Emerald</h3>
+        <p class="card-tag">Step-cut, quiet clarity</p>
+        <p>Long open facets that favour clarity over sparkle — for stones with nothing to hide.</p>
+        <a class="card-link" href="#">Explore Emerald →</a>
+      </article>
 
-    <!-- Metals Section -->
-    <section class="metals">
-        <div class="container">
-            <h2>Premium Metal Collections</h2>
-            <div class="metals-grid">
-                <div class="metal-card gold">
-                    <h3>Gold</h3>
-                    <p>Timeless luxury in golden brilliance</p>
-                </div>
-                <div class="metal-card diamond">
-                    <h3>Diamond</h3>
-                    <p>Unparalleled sparkle and elegance</p>
-                </div>
-                <div class="metal-card silver">
-                    <h3>Silver</h3>
-                    <p>Classic sophistication in pure silver</p>
-                </div>
-                <div class="metal-card rose-gold">
-                    <h3>Rose Gold</h3>
-                    <p>Contemporary charm in rose tones</p>
-                </div>
-            </div>
+      <article class="card reveal">
+        <div class="card-visual">
+          <svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 25 C140 55, 165 100, 100 175 C35 100, 60 55, 100 25 Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
         </div>
-    </section>
+        <h3>Pear</h3>
+        <p class="card-tag">Teardrop, single point</p>
+        <p>One point, one curve — an asymmetric silhouette worn to draw the eye downward.</p>
+        <a class="card-link" href="#">Explore Pear →</a>
+      </article>
+    </div>
+  </section>
 
-    <!-- Featured Products -->
-    <section class="featured">
-        <div class="container">
-            <h2>Featured Pieces</h2>
-            <div class="products-grid" id="featuredProducts">
-                <!-- Will be populated by JavaScript -->
-            </div>
+  <!-- CRAFT / PROCESS -->
+  <section class="craft" id="craft">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Craft</p>
+      <h2>From rough stone to finished piece</h2>
+    </div>
+
+    <ol class="process">
+      <li class="reveal">
+        <span class="process-index">Source</span>
+        <h3>We trace every stone</h3>
+        <p>Each gem arrives with a paper trail back to the mine or river it came from, checked before it ever reaches the bench.</p>
+      </li>
+      <li class="reveal">
+        <span class="process-index">Cut</span>
+        <h3>We cut for the stone, not the trend</h3>
+        <p>A cutter studies each rough stone for weeks, choosing the facet plan that keeps the most light inside it.</p>
+      </li>
+      <li class="reveal">
+        <span class="process-index">Set</span>
+        <h3>We set it by hand</h3>
+        <p>The final setting is filed and polished under a loupe, one piece at a time, never cast from a mould twice.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ATELIER / TESTIMONIAL -->
+  <section class="atelier" id="atelier">
+    <div class="atelier-grid">
+      <div class="atelier-quote reveal">
+        <svg class="quote-mark" viewBox="0 0 40 30" aria-hidden="true"><path d="M0 30V16C0 6 6 0 16 0V6C10 6 6 10 6 16H14V30H0ZM24 30V16C24 6 30 0 40 0V6C34 6 30 10 30 16H38V30H24Z" fill="currentColor"/></svg>
+        <p>"The ring caught light across the whole table before anyone saw the ring itself. That's the whole idea of a brilliant cut, done properly."</p>
+        <cite>— a placeholder client, for demo purposes</cite>
+      </div>
+      <div class="atelier-stats reveal">
+        <div><strong>1</strong><span>bench, one cutter per stone</span></div>
+        <div><strong>100%</strong><span>traceable origin on every gem</span></div>
+        <div><strong>6–8 wks</strong><span>from rough stone to finished setting</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner reveal">
+      <h2>Visit the atelier</h2>
+      <p>By appointment only — fictional address below, wire it up to a real one before publishing for real.</p>
+      <div class="contact-details">
+        <div>
+          <span class="label">Address</span>
+          <p>14 Facet Lane, Workshop&nbsp;3<br>(placeholder — replace me)</p>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose GLITTERING GEMS?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Authentic Quality</h3>
-                    <p>100% genuine metals and diamonds certified</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Fast Shipping</h3>
-                    <p>Secure and quick delivery to your doorstep</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-undo"></i>
-                    <h3>Easy Returns</h3>
-                    <p>30-day return policy with no questions asked</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-lock"></i>
-                    <h3>Secure Payment</h3>
-                    <p>Safe and encrypted transactions</p>
-                </div>
-            </div>
+        <div>
+          <span class="label">Hours</span>
+          <p>Tue–Sat, 11:00–18:00<br>By appointment</p>
         </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Get exclusive offers and new collection updates</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
+        <div>
+          <span class="label">Enquiries</span>
+          <p>hello@glitteringgems.example</p>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>GLITTERING GEMS</h4>
-                    <p>Your destination for premium jewelry</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="products.html">Shop</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Us</h4>
-                    <p>📞 +91 9300120069</p>
-                    <p>📧 info@glitteringgems.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 GLITTERING GEMS. All rights reserved.</p>
-            </div>
+      <form class="signup" id="signupForm">
+        <label for="email">Join the list for new-collection previews</label>
+        <div class="signup-row">
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <button type="submit" class="btn btn-gold">Notify me</button>
         </div>
-    </footer>
+        <p class="signup-note" id="signupNote" role="status"></p>
+      </form>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="wordmark small">Glittering&nbsp;Gems</span>
+    <p>A fictional demo brand — replace all placeholder copy, imagery, and links before publishing for real use.</p>
+    <div class="footer-links">
+      <a href="#collections">Collections</a>
+      <a href="#craft">Craft</a>
+      <a href="#contact">Visit</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
